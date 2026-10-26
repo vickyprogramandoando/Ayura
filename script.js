@@ -1,11 +1,7 @@
-/* ============ CONFIGURACIÓN ============
-   Cambia este número por el WhatsApp de Ayura:
-   código de país + número, sin +, espacios ni guiones.
-   Ejemplo Colombia: "573001234567"                      */
 const WHATSAPP_NUMBER = "573235276719";
 const MENSAJE_BASE = "Hola Ayura 👋 Quiero más información sobre Omnilife y Seytú.";
 
-/* ---------- Tema (se aplica de inmediato, antes de pintar) ---------- */
+/* ---------- Tema ---------- */
 const root = document.documentElement;
 const THEME_KEY = "ayura-theme";
 (function () {
@@ -66,7 +62,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }));
 
-  /* ---------- Productos: lista "Me interesa" → mensaje de WhatsApp ---------- */
+  /* ---------- Productos: lista "Me interesa" a mensaje de WhatsApp ---------- */
   const picked = new Set();
   const tray = $("#tray");
   const renderTray = () => {
@@ -94,7 +90,7 @@ document.addEventListener("DOMContentLoaded", () => {
     renderTray();
   });
 
-  /* ---------- Formulario de contacto → WhatsApp ---------- */
+  /* ---------- Formulario de contacto a WhatsApp ---------- */
   const form = $("#form"), err = $("#err");
   form.nombre.addEventListener("input", () => {
     err.hidden = true;
